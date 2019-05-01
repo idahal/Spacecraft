@@ -11,17 +11,12 @@
                 <p><i><?php the_field('name');?></i></p>
             <?php endif;?>
         <?php the_content(); ?>
-        <div class="row mb-4">
-          <?php the_post_thumbnail('medium'); ?>
-        </div>
-        <div class="column">
+            <div class="column">
         <?php if(get_field('content')): ?>
             <p>Event Date: <?php the_field('content'); ?></p>
+
           <?php endif;?>
         </div>
-
-
-
 
         <div class="float-left">
                <?php previous_post_link(); ?>
