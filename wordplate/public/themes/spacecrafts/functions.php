@@ -8,8 +8,8 @@ add_action('after_setup_theme', function () {
 });
 
 
-// Register student custom post type.
-// require get_template_directory().'/post-types/event.php';
+// Register spacecraft custom post type.
+require get_template_directory().'/post-types/spacecraft.php';
 
 // Register skill taxonomy for the student custom post type.
 // require get_template_directory().'/taxonomies/skill.php';
