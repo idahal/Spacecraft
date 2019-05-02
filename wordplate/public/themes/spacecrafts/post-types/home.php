@@ -15,7 +15,7 @@ add_action('init', function () {
             'editor',
             'thumbnail',
             ],
-        'menu_icon' => 'dashicons-star-empty',
+        'menu_icon' => 'dashicons-admin-home',
         'menu_position' => 20,
         'public' => true,
     ]);
