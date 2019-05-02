@@ -1,48 +1,26 @@
+<?php /* Template Name: Homes */ ?>
+
 <?php get_header(); ?>
 
-<div class="row mt-5">
-  <div class="col">
-    <?php if (have_posts()) : ?>
+        <?php if (have_posts()) : ?>
 
-      <?php while (have_posts()): the_post(); ?>
+            <?php while (have_posts()): the_post(); ?>
 
-        <?php the_content(); ?>
+                <?php the_content(); ?>
 
-      <?php endwhile; ?>
-
-    <?php endif; ?>
-  </div><!-- /col -->
-</div><!-- /row -->
+            <?php endwhile; ?>
+        <?php endif; ?>
 
 <?php
-$args = [
-  "numberposts" => 2,
-  "order" => "desc"
-];
-
-$latestPosts = get_posts($args);
-
+    $homepages = get_posts(array('post_type' => 'home'));
 ?>
 
-<div class="row mt-5">
-
-    <?php foreach ($latestPosts as $post): setup_postdata($post) ?>
-      <div class="col">
-        <?php if ( has_post_thumbnail() ): ?>
-          <?php the_post_thumbnail('thumbnail'); ?>
-        <?php endif; ?>
-      </div>
-
-      <div class="col-4">
-        <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?> </a></h2>
-        <p><?php the_excerpt(); ?> </p>
-      </div>
-    <?php endforeach; ?>
-</div><!--row-->
-
-    <div class="row mb-3">
-      <?php $blogPageUrl = get_permalink(get_option("page_for_posts")); ?>
-      <a href="<?= $blogPageUrl ?>">View all posts...</a>
-    </div><!--row-->
-
+<div class="row">
+        <?php foreach ($homepages as $home): ?>
+            <div class="col mt-5">
+                <h1 class="title"><?php echo the_field('welcome', $home); ?></h1>
+                <img class="image_front_page" src="<?php echo the_field('image_front_page', $home); ?>" />
+            </div><!-- /col -->
+        <?php endforeach; ?>
+</div><!-- /row -->
 <?php get_footer(); ?>

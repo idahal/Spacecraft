@@ -7,9 +7,12 @@ add_action('after_setup_theme', function () {
     add_theme_support('title-tag');
 });
 
-// Register spacecraft custom post type.
+// Register custom post type.
 require get_template_directory().'/post-types/spacecraft.php';
 
+require get_template_directory().'/post-types/home.php';
+
+// Register acf
 require get_template_directory().'/custom-fields/cf-spacecraft.php';
 
 //Plate.php
