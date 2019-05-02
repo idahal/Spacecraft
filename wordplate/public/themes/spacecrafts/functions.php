@@ -32,8 +32,6 @@ add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('jquery');
     wp_enqueue_script('bootstrap');
     wp_enqueue_style( 'style', get_stylesheet_uri() );
-    // wp_enqueue_style( 'style', get_stylesheet_directory_uri().'/assets/styles/app.css');
-    // wp_enqueue_script('script', get_stylesheet_directory_uri().'/assets/scripts/app.js');
 });
 
 /**
@@ -47,5 +45,5 @@ add_theme_support('soil-js-to-footer');
 add_theme_support('soil-nice-search');
 add_theme_support('soil-relative-urls');
 
-//remove error message
+// Remove error message
 remove_action('shutdown', 'wp_ob_end_flush_all', 1);

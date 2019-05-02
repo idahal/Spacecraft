@@ -7,8 +7,6 @@
     <?php while (have_posts()): the_post(); ?>
 
         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-
-        <?php the_date() ?>
         <?php the_content(); ?>
         <div class="row mb-4">
           <?php the_post_thumbnail('medium'); ?>
@@ -17,7 +15,6 @@
         <div class="float-left">
                <?php previous_post_link(); ?>
              </div>
-
              <div class="float-right">
                <?php next_post_link(); ?>
              </div>
