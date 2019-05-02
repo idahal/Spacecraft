@@ -25,7 +25,7 @@ $spacecrafts = get_posts(array('post_type' => 'spacecraft'));
                 <div class="col mt-4">
                     <h2><a href="<?php the_permalink($spacecraft); ?>"><?php echo the_field('name', $spacecraft); ?></a></h2>
                     <?php the_excerpt(); ?>
-                    <img src="<?php echo the_field('image', $spacecraft, 'thumbnail'); ?>" />
+                    <img src="<?php echo the_field('image', $spacecraft); ?>" />
                     <p>About this spacecraft: <?php echo the_field('content', $spacecraft); ?></p>
 
     <?php endforeach; ?>

@@ -2,11 +2,11 @@
 if( function_exists('acf_add_local_field_group') ):
 
 acf_add_local_field_group(array(
-	'key' => 'group_5cc9b1bb15849',
-	'title' => 'Spacecraft',
+	'key' => 'group_5ccaea455dc59',
+	'title' => 'Spacecrafts',
 	'fields' => array(
 		array(
-			'key' => 'field_5cc9b1d320d09',
+			'key' => 'field_5ccaeeb748298',
 			'label' => 'Name',
 			'name' => 'name',
 			'type' => 'text',
@@ -18,14 +18,14 @@ acf_add_local_field_group(array(
 				'class' => '',
 				'id' => '',
 			),
-			'default_value' => '',
+			'default_value' => 'Spacecrafts',
 			'placeholder' => '',
 			'prepend' => '',
 			'append' => '',
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_5cc9b21920d0a',
+			'key' => 'field_5ccaeed848299',
 			'label' => 'Content',
 			'name' => 'content',
 			'type' => 'text',
@@ -44,7 +44,7 @@ acf_add_local_field_group(array(
 			'maxlength' => '',
 		),
 		array(
-			'key' => 'field_5cc9b23b20d0b',
+			'key' => 'field_5ccaef0c4829a',
 			'label' => 'Image',
 			'name' => 'image',
 			'type' => 'image',
@@ -67,6 +67,25 @@ acf_add_local_field_group(array(
 			'max_size' => '',
 			'mime_types' => '',
 		),
+		array(
+			'key' => 'field_5ccaefd04829b',
+			'label' => 'Fun fact',
+			'name' => 'fun_fact',
+			'type' => 'text',
+			'instructions' => '',
+			'required' => 0,
+			'conditional_logic' => 0,
+			'wrapper' => array(
+				'width' => '',
+				'class' => '',
+				'id' => '',
+			),
+			'default_value' => '',
+			'placeholder' => '',
+			'prepend' => '',
+			'append' => '',
+			'maxlength' => '',
+		),
 	),
 	'location' => array(
 		array(
@@ -88,23 +107,4 @@ acf_add_local_field_group(array(
 ));
 
 endif;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

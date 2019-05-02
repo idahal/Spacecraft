@@ -74,4 +74,4 @@ add_theme_support('plate-permalink', '/%postname%/');
 add_theme_support('plate-login-logo', asset('assets/images/logo.png'));
 
 // Set custom footer text.
-add_theme_support('plate-footer-text', 'Thank you for creating with the web developer class of 2018.</a>.');
+add_theme_support('plate-footer-text', 'Superduper nice spacecrafts dashboard</a>.');

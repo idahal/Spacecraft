@@ -10,12 +10,18 @@
             <?php if(get_field('name')): ?>
                 <p><i><?php the_field('name');?></i></p>
             <?php endif;?>
-        <?php the_content(); ?>
-            <div class="column">
+
+        <?php if( get_field('image') ): ?>
+    	       <img src="<?php the_field('image'); ?>" />
+        <?php endif; ?>
+        <div class="column">
         <?php if(get_field('content')): ?>
-            <p>Event Date: <?php the_field('content'); ?></p>
+            <p>About the spacecraft: <?php the_field('content'); ?></p>
 
           <?php endif;?>
+          <?php if(get_field('fun_fact')): ?>
+              <p>Fun fact: <?php the_field('fun_fact'); ?></p>
+         <?php endif;?>
         </div>
 
         <div class="float-left">
